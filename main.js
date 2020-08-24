@@ -76,8 +76,6 @@ function draw() {
   ctx.putImageData(imgData, 10, 10);
 }
 
-
-
 function buildGenerator(a, c, m, seed) {
   return function() {
     seed = (a * seed + c) % m;
