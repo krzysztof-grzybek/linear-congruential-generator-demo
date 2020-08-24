@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linear congruential generator</title>
+</head>
+<body>
+    <form id="main">
+        <label for="a">
+            A:
+            <input type="text" id="a" name="a">
+        </label>
+        <label for="c">
+            C:
+            <input type="text" id="c" name="c">
+        </label>
+        <label for="m">
+            M:
+            <input type="text" id="m" name="m">
+        </label>
+        <label for="seed">
+            SEED:
+            <input type="text" id="seed" name="seed">
+        </label>
+        <button id="apply-btn" type="submit">Apply values</button>
+
+    </form>
+    <button id="draw-btn">Draw</button>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+
+                    <th>A</th>
+                    <th>C</th>
+                    <th>M</th>
+                    <th>SEED</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="current-setup">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <script src="main.js"></script>
+</body>
+</html>
