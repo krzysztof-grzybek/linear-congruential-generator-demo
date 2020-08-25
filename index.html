@@ -3,53 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Linear congruential generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<!--    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <form id="main">
-        <label for="a">
-            A:
-            <input type="text" id="a" name="a">
-        </label>
-        <label for="c">
-            C:
-            <input type="text" id="c" name="c">
-        </label>
-        <label for="m">
-            M:
-            <input type="text" id="m" name="m">
-        </label>
-        <label for="seed">
-            SEED:
-            <input type="text" id="seed" name="seed">
-        </label>
-        <button id="apply-btn" type="submit">Apply values</button>
+    <div class="ui two column stackable grid">
+        <div class="column">
+            <form id="main" class="setup-form">
 
-    </form>
-    <button id="draw-btn">Draw</button>
+                <div class="ui labeled input spacing-ver-bottom">
+                    <label for="a" class="ui label">
+                        A:
+                    </label>
+                    <input type="text" id="a" name="a" value="1664525">
+                </div>
+                <div class="ui labeled input spacing-ver-bottom">
+                    <label for="c" class="ui label">
+                        C:
+                    </label>
+                    <input type="text" id="c" name="c" value="1013904223">
+                </div>
+                <div class="ui labeled input spacing-ver-bottom">
+                    <label for="m" class="ui label">
+                        M:
+                    </label>
+                    <input type="text" id="m" name="m" value="4294967296">
+                </div>
+                <div class="ui labeled input spacing-ver-bottom">
+                    <label for="seed" class="ui label">
+                        SEED:
+                    </label>
+                    <input type="text" id="seed" name="seed" value="1">
+                </div>
+                <button id="apply-btn" type="submit"  class="ui button">Apply values</button>
 
-    <div>
-        <table>
-            <thead>
-                <tr>
+            </form>
+        </div>
 
-                    <th>A</th>
-                    <th>C</th>
-                    <th>M</th>
-                    <th>SEED</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="current-setup">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div class="column">
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+
+                        <th>A</th>
+                        <th>C</th>
+                        <th>M</th>
+                        <th>SEED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="current-setup">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="draw-btn" disabled  class="ui button">Draw</button>
+        </div>
     </div>
 
-    <canvas id="canvas"></canvas>
+    <canvas id="canvas" width="1024" height="1024"></canvas>
     <script src="main.js"></script>
 </body>
 </html>

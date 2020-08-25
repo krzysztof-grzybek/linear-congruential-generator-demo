@@ -1,0 +1,19 @@
+body {
+    padding: 15px;
+}
+.spacing-ver-bottom {
+    margin-bottom: 15px;
+}
+td, th {
+    width: 25%;
+}
+.setup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+canvas {
+    display: block;
+    margin: 15px auto;
+    border: 1px solid rgba(34,36,38,.15)
+}
